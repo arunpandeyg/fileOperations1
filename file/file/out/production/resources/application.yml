@@ -1,0 +1,26 @@
+file:
+     storage:
+          location: fileStorage
+
+spring:
+     servlet:
+          multipart:
+               enabled: true
+               location: temp-fo
+               file-size-threshold: 5MB
+               max-file-size: 5MB
+               max-request-size: 25MB
+
+     datasource:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          password: ArunPandey#
+          url: jdbc:mysql://localhost:3306/fo
+          username: root
+     jpa:
+          hibernate:
+               ddl-auto: update
+          properties:
+               hibernate:
+                    dialect: org.hibernate.dialect.MySQLDialect
+                    format_sql: true
+          show-sql: true
